@@ -6,12 +6,16 @@ public class Main {
 
         card1.deposit(50.0);
         card2.deposit(100.0);
-
         card3.withdraw(75.0);
 
         System.out.println("Текущее состояние карточек:");
         card1.printInfo();
         card2.printInfo();
         card3.printInfo();
+
+        ATM atm = new ATM(10, 10, 10);
+        atm.addMoney(5, 2, 1);
+        boolean result = atm.withdrawMoney(370);
+        System.out.println("Снятие успешно: " + result);
     }
 }
